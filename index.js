@@ -1,3 +1,26 @@
+const links =document.querySelectorAll('a[href^="#"]');
+
+link.forEach(
+  link =>{
+    link.addEventListener('click',(event)=>{
+      event.preventDefault(); //default anchor link behavior
+
+      const targetId = link.getAttribute('href').substring(1);
+      const targetElement = document.getElementById(targetId);
+
+      window.scrollTo(
+        {
+          top: targetElement.offsetTop,
+          behavior: 'smooth'
+        });
+    });
+  });
+
+
+
+
+
+
 
 $(document).ready(function(){
   $(".button").click(function(){
